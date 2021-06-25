@@ -18,7 +18,7 @@ const ProductForm = (props) => {
     
     return(
         <div>
-            <h1>Product Form</h1>
+            <h3>Product Form</h3>
             <form onSubmit = {(e) => handleSubmit(e)}>
                 <label>Title: </label>
                 {

@@ -31,7 +31,7 @@ const CreateProduct = (props) => {
 
     return(
         <div>
-            <h1>Create Product</h1>
+            <h3>Create Product</h3>
             <ProductForm 
                 product = {product}
                 setProduct = {setProduct}

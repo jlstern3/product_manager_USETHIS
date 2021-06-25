@@ -24,7 +24,7 @@ const AllProducts = (props) => {
 
     return (
         <div>
-            <h1>All Movies</h1>
+            <h3>All Movies</h3>
             <Link to={"/api/products/new"}><button className = "btnNew">Create a New Product</button></Link>
             {
                 products.map((product, index) => {

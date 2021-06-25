@@ -21,7 +21,7 @@ const ProductDetails = (props) => {
 
     return(
         <div>
-            <h1>Product Details</h1>
+            <h3>Product Details</h3>
             <p>Title: {product.title}</p>
             <p>Price: ${product.price}</p>
             <p>Description: {product.description}</p>

@@ -47,8 +47,7 @@ const EditProduct = (props) => {
             <DeleteProduct  
                 id = {props.id}
                 afterDeleteHandler = {afterDeleteHandler} />
-            <Link to={"/api/products"}><button>Back to All Products</button></Link>
-            
+            <Link to={"/api/products"}><button>Back to All Products</button></Link>     
         </div>
     )
 }
