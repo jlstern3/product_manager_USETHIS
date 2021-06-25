@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {Link, navigate} from '@reach/router';
 import DeleteProduct from './DeleteProduct';
+import { Button } from '@material-ui/core';
 
 const ProductDetails = (props) => {
     const [product, setProduct] = useState({});
@@ -25,8 +26,8 @@ const ProductDetails = (props) => {
             <p>Title: {product.title}</p>
             <p>Price: ${product.price}</p>
             <p>Description: {product.description}</p>
-            <Link to = {"/api/products"}><button>Back to All Products</button></Link>
-            <Link to = {"/api/products/" + props.id + "/edit"}><button>Edit {product.title}</button></Link>
+            <Link to = {"/api/products"}><Button>Back to All Products</Button></Link>
+            <Link to = {"/api/products/" + props.id + "/edit"}><Button>Edit {product.title}</Button></Link>
             <DeleteProduct id = {props.id} afterDeleteHandler = {afterDeleteHandler}/>
         </div>
     )

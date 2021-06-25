@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link} from '@reach/router';
 import DeleteProduct from './DeleteProduct';
+import { Card, CardContent } from '@material-ui/core';
+
 
 const AllProducts = (props) => {
     const [products, setProducts] = useState([]);
@@ -24,18 +26,25 @@ const AllProducts = (props) => {
 
     return (
         <div>
-            <h3>All Movies</h3>
+            <Card>
+                <CardContent>
+                    <h3>All Movies</h3>
+                </CardContent>
+            </Card>
+
             <Link to={"/api/products/new"}><button className = "btnNew">Create a New Product</button></Link>
             {
                 products.map((product, index) => {
                     console.log("this is a new product: " + product.title);
                     return(
+                        
                         <div key={index}>
                             <Link to={"/api/products/" + product._id}> {product.title}</Link>
                             <DeleteProduct
                                 id={product._id}
                                 afterDeleteHandler={afterDeleteHandler} />
                         </div>
+                        
                     )
                 })
             }
