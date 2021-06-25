@@ -54,3 +54,8 @@ button {
     background-color: white;
     box-shadow: 2px 3px black;
 }
+
+.error-text{
+    margin-left: 20px;
+    color: red;
+}

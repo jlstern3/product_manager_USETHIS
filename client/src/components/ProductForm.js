@@ -3,7 +3,7 @@ import axios from 'axios';
 import {Link, navigate} from '@reach/router';
 
 const ProductForm = (props) => {
-//took out errors in deconstruction for testing
+
     const { errors, product, setProduct, submitHandler, submitButtonLabel } = props;
 
     const inputChange = (e) => {
@@ -21,11 +21,11 @@ const ProductForm = (props) => {
             <h1>Product Form</h1>
             <form onSubmit = {(e) => submitHandler(e)}>
                 <label>Title: </label>
-                {/* {
+                {
 					errors.title ?
 						<span className="error-text">{errors.title.message}</span>
 						: null
-				} */}
+				}
                 <input
                 type = "text"
                 name = "title"
@@ -33,11 +33,11 @@ const ProductForm = (props) => {
                 onChange = {(e) => inputChange(e)}/>
 
                 <label>Price: </label>
-                {/* {
+                {
 					errors.price ?
 						<span className="error-text">{errors.price.message}</span>
 						: null
-				} */}
+				}
                 <input
                 type = "number"
                 name = "price"
@@ -45,11 +45,11 @@ const ProductForm = (props) => {
                 onChange = {(e) => inputChange(e)}/>
 
                 <label>Description: </label>
-                {/* {
+                {
 					errors.description ?
 						<span className="error-text">{errors.description.message}</span>
 						: null
-				} */}
+				}
                 <input
                 type = "text"
                 name = "description"
