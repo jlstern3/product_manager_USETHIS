@@ -13,7 +13,7 @@ function App() {
       <h1>Product Manager</h1>
       <Router>
         <CreateProduct path = "/api/products/new" />
-        <AllProducts path = "/api/products" />
+        <AllProducts default path = "/api/products" />
         <ProductDetails path = "api/products/:id"/>
         <EditProduct path = "api/products/:id/edit"/>
       </Router>
