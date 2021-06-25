@@ -2,11 +2,13 @@ const express = require('express');
 const app = express();
 const port = 8000;
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 require('./config/mongoose.config');
 
-require('./routes/products.routes')(app);
+// const productRoutes = require('./routes/product.routes');
+// productRoutes(app);
+require('./routes/product.routes') (app);
 
-app.use(express.json());
-app.use(express.urlencoded({extended:true}));
-
-app.listen(port, () => console.log(`Server is actively listening on Port ${port}`))
+app.listen(port, () => console.log(`Server is listening on Port ${port}`));
