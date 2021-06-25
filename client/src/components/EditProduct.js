@@ -43,7 +43,7 @@ const EditProduct = (props) => {
                 setProduct = {setProduct}
                 errors = {errors}
                 handleSubmit = {handleSubmit}
-                submitButtonLabel = {"Update Movie"} />
+                submitButtonLabel = {"Update Product"} />
             <DeleteProduct  
                 id = {props.id}
                 afterDeleteHandler = {afterDeleteHandler} />

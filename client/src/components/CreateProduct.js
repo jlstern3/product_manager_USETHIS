@@ -14,7 +14,7 @@ const CreateProduct = (props) => {
 
 
     
-    const submitHandler = (e) => {
+    const handleSubmit= (e) => {
     e.preventDefault();
     axios.post("http://localhost:8000/api/products", product)
         .then((res) => {
@@ -36,7 +36,7 @@ const CreateProduct = (props) => {
                 product = {product}
                 setProduct = {setProduct}
                 errors = {errors}
-                submitHandler = {submitHandler}
+                handleSubmit = {handleSubmit}
                 submitButtonLabel = {"Create Product"}
             />
         </div>

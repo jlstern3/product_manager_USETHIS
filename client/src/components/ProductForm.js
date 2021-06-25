@@ -4,7 +4,7 @@ import {Link, navigate} from '@reach/router';
 
 const ProductForm = (props) => {
 
-    const { errors, product, setProduct, submitHandler, submitButtonLabel } = props;
+    const { errors, product, setProduct, handleSubmit, submitButtonLabel } = props;
 
     const inputChange = (e) => {
         console.log("input name: " + e.target.name);
@@ -19,7 +19,7 @@ const ProductForm = (props) => {
     return(
         <div>
             <h1>Product Form</h1>
-            <form onSubmit = {(e) => submitHandler(e)}>
+            <form onSubmit = {(e) => handleSubmit(e)}>
                 <label>Title: </label>
                 {
 					errors.title ?
