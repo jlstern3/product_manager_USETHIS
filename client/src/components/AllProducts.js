@@ -31,10 +31,10 @@ const AllProducts = (props) => {
                     console.log("this is a new product: " + product.title);
                     return(
                         <div key={index}>
-                        <Link to={"/api/products" + product._id}> {product.title}</Link>
-                        <DeleteProduct
-                            id={product._id}
-                            afterDeleteHandler={afterDeleteHandler} />
+                            <Link to={"/api/products/" + product._id}> {product.title}</Link>
+                            <DeleteProduct
+                                id={product._id}
+                                afterDeleteHandler={afterDeleteHandler} />
                         </div>
                     )
                 })
