@@ -1,9 +1,7 @@
 import './App.css';
 import {Router} from '@reach/router';
 
-import React, {useState, useEffect} from 'react';
-// import axios from 'axios';
-// import ProductForm from './components/ProductForm';
+import React from 'react';
 import CreateProduct from './components/CreateProduct';
 import AllProducts from './components/AllProducts';
 import ProductDetails from './components/ProductDetails';
