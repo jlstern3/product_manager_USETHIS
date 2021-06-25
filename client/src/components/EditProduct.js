@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {navigate} from '@reach/router';
+import {Link, navigate} from '@reach/router';
 import ProductForm from './ProductForm';
 import DeleteProduct from './DeleteProduct';
 
@@ -47,6 +47,8 @@ const EditProduct = (props) => {
             <DeleteProduct  
                 id = {props.id}
                 afterDeleteHandler = {afterDeleteHandler} />
+            <Link to={"/api/products"}><button>Back to All Products</button></Link>
+            
         </div>
     )
 }

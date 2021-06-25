@@ -59,3 +59,13 @@ button {
     margin-left: 20px;
     color: red;
 }
+.btnNew{
+    background-color: seagreen;
+    color: white;
+    
+}
+
+.deleteBtn{
+    background-color: red;
+    color: white;
+}
