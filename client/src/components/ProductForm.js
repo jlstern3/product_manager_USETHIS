@@ -1,9 +1,10 @@
 import React from 'react';
-
+import axios from 'axios';
+import {Link, navigate} from '@reach/router';
 
 const ProductForm = (props) => {
 //took out errors in deconstruction for testing
-    const { product, setProduct, submitHandler, submitButtonLabel } = props;
+    const { errors, product, setProduct, submitHandler, submitButtonLabel } = props;
 
     const inputChange = (e) => {
         console.log("input name: " + e.target.name);
@@ -18,7 +19,7 @@ const ProductForm = (props) => {
     return(
         <div>
             <h1>Product Form</h1>
-            <form onChange = {(e) => submitHandler(e)}>
+            <form onSubmit = {(e) => submitHandler(e)}>
                 <label>Title: </label>
                 {/* {
 					errors.title ?
