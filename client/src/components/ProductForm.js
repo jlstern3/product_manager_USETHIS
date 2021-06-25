@@ -1,6 +1,23 @@
 import React from 'react';
-import axios from 'axios';
-import {Link, navigate} from '@reach/router';
+import {
+    Paper,
+    FormControl,
+    InputLabel,
+    OutlinedInput,
+    Button
+} from '@material-ui/core';
+
+const styles = {
+    paper: {
+        width: "20rem", padding: "1rem"
+    },
+    input: {
+        marginBottom: "1rem"
+    },
+    button: {
+        width: "100%"
+    }
+}
 
 const ProductForm = (props) => {
 
@@ -17,49 +34,53 @@ const ProductForm = (props) => {
     
     
     return(
-        <div>
+            <Paper elevation = {3} style={styles.paper}>
             <h3>Product Form</h3>
             <form onSubmit = {(e) => handleSubmit(e)}>
-                <label>Title: </label>
+            <FormControl variant="outlined" style={styles.input}>
+            <InputLabel>Title: </InputLabel>
                 {
 					errors.title ?
 						<span className="error-text">{errors.title.message}</span>
 						: null
 				}
-                <input
+                <OutlinedInput 
                 type = "text"
                 name = "title"
                 value = {product.title}
                 onChange = {(e) => inputChange(e)}/>
-
-                <label>Price: </label>
+                </FormControl>
+                <FormControl variant="outlined" style={styles.input}>
+                <InputLabel>Price: </InputLabel>
                 {
 					errors.price ?
 						<span className="error-text">{errors.price.message}</span>
 						: null
 				}
-                <input
+                <OutlinedInput 
                 type = "number"
                 name = "price"
                 value = {product.price}
                 onChange = {(e) => inputChange(e)}/>
-
-                <label>Description: </label>
+                </FormControl>
+                <FormControl variant="outlined" style={styles.input}>
+                <InputLabel>Description: </InputLabel>
                 {
 					errors.description ?
 						<span className="error-text">{errors.description.message}</span>
 						: null
 				}
-                <input
+                <OutlinedInput 
                 type = "text"
                 name = "description"
                 value = {product.description}
                 onChange = {(e) => inputChange(e)}/>
-
-                <button type = "submit">{submitButtonLabel}</button>
+                </FormControl>
+                <Button type = "submit">{submitButtonLabel}</Button>
 
             </form>
-        </div>
+
+        </Paper>
     )
 }
 
